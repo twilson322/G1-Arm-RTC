@@ -1,0 +1,5 @@
+reaction,detected,latency_ms,peak_force_n,impulse_1s_ns,contact_time_ms,final_mode
+ignore,1,8,131.0055,39.34005,474,hold
+stop,1,8,12.49345,0.4934282,63,hold
+float,1,8,12.49345,0.4419978,153,hold
+retract,1,8,12.49345,0.2591347,77,hold

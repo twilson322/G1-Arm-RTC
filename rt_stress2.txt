@@ -1,0 +1,31 @@
+[ 0.112 s] enabled: 1, mode hold
+[ 0.323 s] plan to under the shelf (attempt 1): ok in 201.2 ms (straight), duration 0.24 s, start valid
+[ 0.577 s] reached under the shelf; mailbox retains 1 task(s)
+[ 0.790 s] plan to above the shelf (attempt 1): ok in 213.2 ms (RRT-Connect), duration 0.52 s, start valid
+[ 1.325 s] reached above the shelf; mailbox retains 1 task(s)
+[ 1.625 s] injecting a 20 ms control-thread stall
+[ 1.646 s] supervisor mode safe_stop (watchdog tripped)
+[ 2.199 s] operator reset -> mode hold
+[ 2.434 s] plan to home (attempt 1): ok in 229.6 ms (RRT-Connect), duration 1.14 s, start near_joint_limit (repaired)
+[ 3.586 s] reached home; mailbox retains 1 task(s)
+
+== real-time summary (stress2, 2 stress threads)
+  SCHED_FIFO granted: control 1, robot 1
+  control ticks 3800, skipped periods 25, deadline misses 13
+  control wake-up lateness  p50 20 us  p99 286 us  p99.9 2046 us  max 3277 us
+  control compute           p50 20 us  p99 42 us  max 153 us
+  robot wake-up lateness    p99 72 us  max 2203 us; steps without a new command 3880 of 7656
+  log records written 760, dropped 0
+  moves completed 3/3, unplanned faults 0, injected stall handled 1
+  supervisor transitions:
+    t=  0.011  disabled  -> enabling  (enable_request)
+    t=  0.061  enabling  -> hold      (drive_enabled)
+    t=  0.278  hold      -> executing (start_request)
+    t=  0.523  executing -> hold      (task_done)
+    t=  0.743  hold      -> executing (start_request)
+    t=  1.268  executing -> hold      (task_done)
+    t=  1.589  hold      -> safe_stop (drive_fault)
+    t=  2.089  safe_stop -> enabling  (reset_request)
+    t=  2.139  enabling  -> hold      (drive_enabled)
+    t=  2.383  hold      -> executing (start_request)
+    t=  3.526  executing -> hold      (task_done)

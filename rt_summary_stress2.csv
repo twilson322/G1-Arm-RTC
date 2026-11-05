@@ -1,0 +1,2 @@
+tag,stress_threads,control_fifo,robot_fifo,control_ticks,control_skipped_periods,deadline_misses,wake_p50_us,wake_p99_us,wake_p999_us,wake_max_us,compute_p50_us,compute_p99_us,compute_max_us,robot_wake_p99_us,robot_wake_max_us,robot_steps_without_new_command,robot_steps,log_written,log_dropped,moves_completed,unplanned_faults,stall_handled
+stress2,2,1,1,3800,25,13,20,286,2046,3276.65,20,42,152.957,72,2202.86,3880,7656,760,0,3,0,1

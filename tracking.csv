@@ -1,0 +1,13 @@
+controller,condition,rms_pos_mm,max_pos_mm,rms_rot_deg,peak_tau_ratio,sat_ticks,payload_estimate_kg
+joint_pd_gravity,nominal,6.803978,10.16006,2.158056,0.226084,0,0
+joint_pd_gravity,payload_1kg,47.1005,59.4556,10.57041,0.4375941,0,0
+computed_torque,nominal,1.890448,3.252755,1.638872,0.2355365,0,0
+computed_torque,payload_1kg,14.25197,17.3583,4.072231,0.4977272,0,0
+operational_space,nominal,1.504137,2.975971,2.683046,0.2103352,0,0
+operational_space,payload_1kg,20.94966,23.72161,8.44502,0.4424912,0,0
+cartesian_impedance,nominal,7.774158,13.4661,1.787487,0.2426529,0,0
+cartesian_impedance,payload_1kg,18.01851,29.94315,1.677361,0.5517617,0,0
+computed_torque,payload_1kg_adapted,0.6995253,1.185299,1.482146,0.5500317,0,1.042855
+computed_torque,nominal_adapted,1.891903,3.247643,1.639279,0.2341083,0,-0.0002218351
+operational_space,payload_1kg_adapted,0.7517416,1.412882,2.445838,0.5411214,0,1.043814
+operational_space,nominal_adapted,1.499489,2.935853,2.681857,0.2107904,0,0.001624716

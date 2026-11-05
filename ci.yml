@@ -1,0 +1,34 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: release
+            flags: -DCMAKE_BUILD_TYPE=Release
+          - name: asan-ubsan
+            flags: -DCMAKE_BUILD_TYPE=Debug -DG1RTC_SANITIZE=ON -DG1RTC_BENCH=OFF
+          - name: tsan
+            flags: -DG1RTC_TSAN=ON -DG1RTC_BENCH=OFF
+    name: ${{ matrix.name }}
+    steps:
+      - uses: actions/checkout@v4
+      # a managed interpreter: Ubuntu 24.04's system pip refuses installs (PEP 668)
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update && sudo apt-get install -y ninja-build libeigen3-dev libgtest-dev libbenchmark-dev
+      - run: pip install mujoco==3.17.0
+      - run: ./tools/fetch_assets.sh
+      - run: cmake -S . -B build -G Ninja ${{ matrix.flags }}
+      - run: cmake --build build
+      - run: cd build && ctest --output-on-failure
+  ros2:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -f docker/ros2.Dockerfile -t g1-arm-rtc-ros .
+      - run: docker run --rm g1-arm-rtc-ros

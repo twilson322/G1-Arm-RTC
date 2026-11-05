@@ -1,0 +1,9 @@
+build*/
+third_party/
+models/assets/
+__pycache__/
+results/rt_log_*.csv
+results/trace_*.csv
+results/*_trace_*.csv
+results/topp_profile_*.csv
+compile_commands.json

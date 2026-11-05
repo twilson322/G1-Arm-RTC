@@ -1,0 +1,12 @@
+time_s,from,to,reason
+0.004,disabled,enabling,enable_request
+0.054,enabling,hold,drive_enabled
+0.168,hold,executing,start_request
+0.412,executing,hold,task_done
+0.6405,hold,executing,start_request
+1.165,executing,hold,task_done
+1.4775,hold,safe_stop,drive_fault
+1.9725,safe_stop,enabling,reset_request
+2.0225,enabling,hold,drive_enabled
+2.1525,hold,executing,start_request
+3.2945,executing,hold,task_done

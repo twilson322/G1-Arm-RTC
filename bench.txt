@@ -1,0 +1,23 @@
+2026-11-03T09:39:31-05:00
+Running ./build/g1rtc_bench
+Run on (2 X 2100 MHz CPU s)
+CPU Caches:
+  L1 Data 48 KiB (x2)
+  L1 Instruction 32 KiB (x2)
+  L2 Unified 2048 KiB (x2)
+  L3 Unified 266240 KiB (x1)
+Load Average: 0.54, 0.28, 0.19
+***WARNING*** Library was built as DEBUG. Timings may be affected.
+------------------------------------------------------------------------------------
+Benchmark                                          Time             CPU   Iterations
+------------------------------------------------------------------------------------
+BM_ForwardKinematics                            1697 ns         1667 ns       434067
+BM_Rnea                                         1288 ns         1256 ns       567901
+BM_Crba                                          967 ns          957 ns       733620
+BM_ObserverBiasWithDualNumbers                 10613 ns        10369 ns        68191
+BM_DynamicsCacheUpdate                          5915 ns         5787 ns       131080
+BM_ControlTickHold                             88275 ns        85197 ns         8750
+BM_ControlTickHoldFlushToZero                  22604 ns        22216 ns        35204
+BM_ControlTickOperationalSpace                 28090 ns        27954 ns        28851
+BM_ControlTickOperationalSpaceFlushToZero      25828 ns        25602 ns        27581
+BM_MuJoCoForwardForScale                      110015 ns       109281 ns         5923

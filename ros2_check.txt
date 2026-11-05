@@ -1,0 +1,26 @@
+[PASS] node reports a mode (mode=disabled)
+[PASS] enable service /g1rtc/enable requested in mode disabled
+[PASS] reaches hold 
+[PASS] joint_states rate (100.0 Hz)
+[PASS] move under the shelf (final error 1.6 mm)
+[PASS] move above the shelf (final error 4.1 mm)
+[PASS] stop -> safe_stop 
+[PASS] reset -> hold 
+mode sequence: disabled -> enabling -> hold -> executing -> hold -> executing -> hold -> safe_stop -> enabling -> hold
+---- node log (tail) ----
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-11-03-15-05-46-181792-b9af2936de86-29
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [g1_arm_rtc_node-1]: process started with pid [35]
+[g1_arm_rtc_node-1] [INFO] [1793718347.527244626] [g1_arm_rtc]: control stack running (realtime requested: no)
+[g1_arm_rtc_node-1] [INFO] [1793718347.537391638] [g1_arm_rtc]: mode: disabled
+[g1_arm_rtc_node-1] [INFO] [1793718350.777411271] [g1_arm_rtc]: mode: enabling
+[g1_arm_rtc_node-1] [INFO] [1793718350.827501519] [g1_arm_rtc]: mode: hold
+[g1_arm_rtc_node-1] [INFO] [1793718352.919348871] [g1_arm_rtc]: planned in 80.4 ms (straight), executing 0.95 s trajectory
+[g1_arm_rtc_node-1] [INFO] [1793718352.927538822] [g1_arm_rtc]: mode: executing
+[g1_arm_rtc_node-1] [INFO] [1793718353.897358051] [g1_arm_rtc]: mode: hold
+[g1_arm_rtc_node-1] [INFO] [1793718354.325058786] [g1_arm_rtc]: planned in 126.5 ms (RRT-Connect), executing 0.50 s trajectory
+[g1_arm_rtc_node-1] [INFO] [1793718354.337355656] [g1_arm_rtc]: mode: executing
+[g1_arm_rtc_node-1] [INFO] [1793718354.837281846] [g1_arm_rtc]: mode: hold
+[g1_arm_rtc_node-1] [INFO] [1793718355.157421420] [g1_arm_rtc]: mode: safe_stop
+[g1_arm_rtc_node-1] [INFO] [1793718355.167355539] [g1_arm_rtc]: mode: enabling
+[g1_arm_rtc_node-1] [INFO] [1793718355.217836698] [g1_arm_rtc]: mode: hold

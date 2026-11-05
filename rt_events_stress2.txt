@@ -1,0 +1,10 @@
+0.112025 enabled: 1, mode hold
+0.323216 plan to under the shelf (attempt 1): ok in 201.2 ms (straight), duration 0.24 s, start valid
+0.5769 reached under the shelf; mailbox retains 1 task(s)
+0.790255 plan to above the shelf (attempt 1): ok in 213.2 ms (RRT-Connect), duration 0.52 s, start valid
+1.32465 reached above the shelf; mailbox retains 1 task(s)
+1.62529 injecting a 20 ms control-thread stall
+1.64605 supervisor mode safe_stop (watchdog tripped)
+2.19851 operator reset -> mode hold
+2.43431 plan to home (attempt 1): ok in 229.6 ms (RRT-Connect), duration 1.14 s, start near_joint_limit (repaired)
+3.58577 reached home; mailbox retains 1 task(s)

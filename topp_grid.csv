@@ -1,0 +1,9 @@
+grid_points,scheme,duration_s,param_ms,planned_peak_tau_ratio
+100,collocation,0.309,3.728877,0.94975
+100,interpolation,0.313,11.79757,0.8512002
+200,collocation,0.312,6.744556,0.9440639
+200,interpolation,0.313,25.33218,0.812283
+400,collocation,0.313,12.37366,0.927871
+400,interpolation,0.313,73.69909,0.7999933
+1000,collocation,0.312,43.18017,0.8564345
+1000,interpolation,0.312,134.4346,0.799999

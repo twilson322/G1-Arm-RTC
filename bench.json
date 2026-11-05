@@ -1,0 +1,180 @@
+{
+  "context": {
+    "date": "2026-11-03T09:39:31-05:00",
+    "host_name": "vm",
+    "executable": "./build/g1rtc_bench",
+    "num_cpus": 2,
+    "mhz_per_cpu": 2100,
+    "cpu_scaling_enabled": false,
+    "caches": [
+      {
+        "type": "Data",
+        "level": 1,
+        "size": 49152,
+        "num_sharing": 1
+      },
+      {
+        "type": "Instruction",
+        "level": 1,
+        "size": 32768,
+        "num_sharing": 1
+      },
+      {
+        "type": "Unified",
+        "level": 2,
+        "size": 2097152,
+        "num_sharing": 1
+      },
+      {
+        "type": "Unified",
+        "level": 3,
+        "size": 272629760,
+        "num_sharing": 2
+      }
+    ],
+    "load_avg": [0.539062,0.277832,0.186523],
+    "library_build_type": "debug"
+  },
+  "benchmarks": [
+    {
+      "name": "BM_ForwardKinematics",
+      "family_index": 0,
+      "per_family_instance_index": 0,
+      "run_name": "BM_ForwardKinematics",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 434067,
+      "real_time": 1.6973233256617377e+03,
+      "cpu_time": 1.6669512563728645e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Rnea",
+      "family_index": 1,
+      "per_family_instance_index": 0,
+      "run_name": "BM_Rnea",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 567901,
+      "real_time": 1.2876352462840077e+03,
+      "cpu_time": 1.2562796438111573e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_Crba",
+      "family_index": 2,
+      "per_family_instance_index": 0,
+      "run_name": "BM_Crba",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 733620,
+      "real_time": 9.6708616722552119e+02,
+      "cpu_time": 9.5693676426487843e+02,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_ObserverBiasWithDualNumbers",
+      "family_index": 3,
+      "per_family_instance_index": 0,
+      "run_name": "BM_ObserverBiasWithDualNumbers",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 68191,
+      "real_time": 1.0613411344605314e+04,
+      "cpu_time": 1.0369382059216025e+04,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_DynamicsCacheUpdate",
+      "family_index": 4,
+      "per_family_instance_index": 0,
+      "run_name": "BM_DynamicsCacheUpdate",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 131080,
+      "real_time": 5.9150925007627147e+03,
+      "cpu_time": 5.7870858559658218e+03,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_ControlTickHold",
+      "family_index": 5,
+      "per_family_instance_index": 0,
+      "run_name": "BM_ControlTickHold",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 8750,
+      "real_time": 8.8274973370477834e+04,
+      "cpu_time": 8.5196575771425894e+04,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_ControlTickHoldFlushToZero",
+      "family_index": 6,
+      "per_family_instance_index": 0,
+      "run_name": "BM_ControlTickHoldFlushToZero",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 35204,
+      "real_time": 2.2604311157577231e+04,
+      "cpu_time": 2.2216336041364953e+04,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_ControlTickOperationalSpace",
+      "family_index": 7,
+      "per_family_instance_index": 0,
+      "run_name": "BM_ControlTickOperationalSpace",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 28851,
+      "real_time": 2.8090158885397137e+04,
+      "cpu_time": 2.7954320162214590e+04,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_ControlTickOperationalSpaceFlushToZero",
+      "family_index": 8,
+      "per_family_instance_index": 0,
+      "run_name": "BM_ControlTickOperationalSpaceFlushToZero",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 27581,
+      "real_time": 2.5827623545146296e+04,
+      "cpu_time": 2.5602182045617948e+04,
+      "time_unit": "ns"
+    },
+    {
+      "name": "BM_MuJoCoForwardForScale",
+      "family_index": 9,
+      "per_family_instance_index": 0,
+      "run_name": "BM_MuJoCoForwardForScale",
+      "run_type": "iteration",
+      "repetitions": 1,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 5923,
+      "real_time": 1.1001525308120546e+05,
+      "cpu_time": 1.0928114046935723e+05,
+      "time_unit": "ns"
+    }
+  ]
+}

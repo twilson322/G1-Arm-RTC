@@ -1,0 +1,92 @@
+== collision detection
+  friction model 1, calibrated thresholds (N m): 0.81 0.81 0.82 0.62 0.43 0.36 0.41 0.21 0.24 0.18
+  WARNING: StackConfig::defaultsG1() thresholds differ from this calibration by more than 5 %
+  friction model 1  scale 0.50  detected 48/48 (tripped early  0)  false-positive runs 1/4  latency median 6 ms p90 13 ms  isolation exact 20/48 within one link 43/48
+  friction model 1  scale 0.75  detected 48/48 (tripped early  0)  false-positive runs 0/4  latency median 8 ms p90 22 ms  isolation exact 25/48 within one link 44/48
+  friction model 1  scale 1.00  detected 48/48 (tripped early  0)  false-positive runs 0/4  latency median 11 ms p90 28 ms  isolation exact 27/48 within one link 46/48
+  friction model 1  scale 1.50  detected 46/48 (tripped early  0)  false-positive runs 0/4  latency median 15 ms p90 51 ms  isolation exact 29/46 within one link 44/46
+  friction model 1  scale 2.00  detected 40/48 (tripped early  0)  false-positive runs 0/4  latency median 13 ms p90 44 ms  isolation exact 28/40 within one link 40/40
+  friction model 0, calibrated thresholds (N m): 1.01 1.07 1.03 0.87 0.81 0.61 0.58 0.46 0.52 0.48
+  friction model 0  scale 0.50  detected  0/48 (tripped early 48)  false-positive runs 4/4  latency median nan ms p90 nan ms  isolation exact 0/0 within one link 0/0
+  friction model 0  scale 0.75  detected 47/48 (tripped early  0)  false-positive runs 0/4  latency median 9 ms p90 28 ms  isolation exact 9/47 within one link 31/47
+  friction model 0  scale 1.00  detected 44/48 (tripped early  0)  false-positive runs 0/4  latency median 11 ms p90 41 ms  isolation exact 14/44 within one link 29/44
+  friction model 0  scale 1.50  detected 41/48 (tripped early  0)  false-positive runs 0/4  latency median 17 ms p90 71 ms  isolation exact 17/41 within one link 31/41
+  friction model 0  scale 2.00  detected 32/48 (tripped early  0)  false-positive runs 0/4  latency median 16 ms p90 58 ms  isolation exact 16/32 within one link 27/32
+== observer residual floor (collision-free motion, max |r| per joint group, N m)
+  deployed                       figure8 waist 0.430  shoulder 0.331  elbow 0.177  wrist 0.074
+  no_filter_matching             figure8 waist 0.431  shoulder 0.333  elbow 0.177  wrist 0.075
+  no_friction_model              figure8 waist 0.708  shoulder 0.461  elbow 0.368  wrist 0.325
+  no_friction_model_no_matching  figure8 waist 0.705  shoulder 0.457  elbow 0.367  wrist 0.325
+  deployed                       shelf   waist 0.539  shoulder 0.248  elbow 0.228  wrist 0.137
+  no_filter_matching             shelf   waist 1.921  shoulder 0.774  elbow 0.255  wrist 0.153
+  no_friction_model              shelf   waist 0.692  shoulder 0.488  elbow 0.384  wrist 0.324
+  no_friction_model_no_matching  shelf   waist 1.664  shoulder 0.888  elbow 0.553  wrist 0.365
+  encoder_16bit                  figure8 waist 1.722  shoulder 0.702  elbow 0.350  wrist 0.174
+  encoder_20bit                  figure8 waist 0.292  shoulder 0.246  elbow 0.126  wrist 0.054
+  gain_15                        figure8 waist 0.260  shoulder 0.256  elbow 0.118  wrist 0.051
+  gain_60                        figure8 waist 0.897  shoulder 0.475  elbow 0.258  wrist 0.104
+  velocity_filter_50hz           figure8 waist 0.297  shoulder 0.266  elbow 0.135  wrist 0.061
+  velocity_filter_300hz          figure8 waist 0.710  shoulder 0.422  elbow 0.258  wrist 0.097
+  ideal_sensing_no_friction      figure8 waist 0.007  shoulder 0.003  elbow 0.001  wrist 0.000
+  ideal_sensing                  figure8 waist 0.233  shoulder 0.221  elbow 0.117  wrist 0.047
+== payload estimation (1 kg at (3, 0, -2) cm in the tool frame)
+  no_wobble  mass 1.044 kg  COM (0.000, 0.000, 0.000) m  rms 0.75 mm
+  wobble     mass 1.001 kg  COM (0.030, 0.001, -0.020) m  rms 0.90 mm
+== planning around the shelf
+  allowed-collision matrix: 3 robot body pairs ignored
+  IK under shelf: converged 1 (2.6e-05 m)  above: 1 (5.7e-05 m)  valid: 1 1  straight segment valid: 0
+  RRT-Connect: 20/20 solved, median plan + shortcut 32.1 ms
+  spline: valid, length 1.534 rad
+  grid  100 collocation   duration 0.309 s  param    3.7 ms  planned peak |tau|/tau_max 0.95 (limit 0.80)
+  grid  100 interpolation duration 0.313 s  param   11.8 ms  planned peak |tau|/tau_max 0.85 (limit 0.80)
+  grid  200 collocation   duration 0.312 s  param    6.7 ms  planned peak |tau|/tau_max 0.94 (limit 0.80)
+  grid  200 interpolation duration 0.313 s  param   25.3 ms  planned peak |tau|/tau_max 0.81 (limit 0.80)
+  grid  400 collocation   duration 0.313 s  param   12.4 ms  planned peak |tau|/tau_max 0.93 (limit 0.80)
+  grid  400 interpolation duration 0.313 s  param   73.7 ms  planned peak |tau|/tau_max 0.80 (limit 0.80)
+  grid 1000 collocation   duration 0.312 s  param   43.2 ms  planned peak |tau|/tau_max 0.86 (limit 0.80)
+  grid 1000 interpolation duration 0.312 s  param  134.4 ms  planned peak |tau|/tau_max 0.80 (limit 0.80)
+  MotionPlanner (as deployed): ok, RRT-Connect, grid 400, peak torque 1.008 of the budget, duration 0.274 s, 139.8 ms
+  topp_kinematic     duration 0.306 s  param 10.1 ms  peak |tau|/tau_max planned 1.44 executed 1.00  sat 27  rms 10.15 mrad  max 29.40 mrad  shelf contact 0 ms
+  topp_torque        duration 0.313 s  param 46.7 ms  peak |tau|/tau_max planned 0.80 executed 0.93  sat 0  rms 8.99 mrad  max 24.33 mrad  shelf contact 0 ms
+  trapezoid_uniform  duration 1.101 s  param 0.0 ms  peak |tau|/tau_max planned 0.30 executed 0.32  sat 0  rms 11.49 mrad  max 24.69 mrad  shelf contact 0 ms
+== collision reaction with an unplanned obstacle
+  ignore   contact at 0.992 s  detected 1 (8 ms)  peak 131.0 N  impulse (1 s) 39.34 N s  contact 474 ms  final hold
+  stop     contact at 0.992 s  detected 1 (8 ms)  peak 12.5 N  impulse (1 s) 0.49 N s  contact 63 ms  final hold
+  float    contact at 0.992 s  detected 1 (8 ms)  peak 12.5 N  impulse (1 s) 0.44 N s  contact 153 ms  final hold
+  retract  contact at 0.992 s  detected 1 (8 ms)  peak 12.5 N  impulse (1 s) 0.26 N s  contact 77 ms  final hold
+== control tick timing (lockstep, wall clock)
+  hold               FTZ 0  mean 88.3 us  p50 80.7  p99 175.3  max 2035.7
+  operational_space  FTZ 0  mean 20.5 us  p50 18.7  p99 40.2  max 333.1
+  computed_torque    FTZ 0  mean 18.9 us  p50 17.5  p99 41.6  max 2129.5
+  hold               FTZ 1  mean 21.9 us  p50 17.8  p99 52.5  max 1653.6
+  operational_space  FTZ 1  mean 19.7 us  p50 18.6  p99 39.9  max 122.6
+  computed_torque    FTZ 1  mean 18.7 us  p50 17.3  p99 38.7  max 279.2
+== figure-8 tracking (scored on laps 4-6)
+  joint_pd_gravity     nominal              rms   6.80 mm  max  10.16 mm  rot  2.16 deg  peak tau 0.23  sat 0  m_hat 0.000
+  joint_pd_gravity     payload_1kg          rms  47.10 mm  max  59.46 mm  rot 10.57 deg  peak tau 0.44  sat 0  m_hat 0.000
+  computed_torque      nominal              rms   1.89 mm  max   3.25 mm  rot  1.64 deg  peak tau 0.24  sat 0  m_hat 0.000
+  computed_torque      payload_1kg          rms  14.25 mm  max  17.36 mm  rot  4.07 deg  peak tau 0.50  sat 0  m_hat 0.000
+  operational_space    nominal              rms   1.50 mm  max   2.98 mm  rot  2.68 deg  peak tau 0.21  sat 0  m_hat 0.000
+  operational_space    payload_1kg          rms  20.95 mm  max  23.72 mm  rot  8.45 deg  peak tau 0.44  sat 0  m_hat 0.000
+  cartesian_impedance  nominal              rms   7.77 mm  max  13.47 mm  rot  1.79 deg  peak tau 0.24  sat 0  m_hat 0.000
+  cartesian_impedance  payload_1kg          rms  18.02 mm  max  29.94 mm  rot  1.68 deg  peak tau 0.55  sat 0  m_hat 0.000
+  computed_torque      payload_1kg_adapted  rms   0.70 mm  max   1.19 mm  rot  1.48 deg  peak tau 0.55  sat 0  m_hat 1.043
+  computed_torque      nominal_adapted      rms   1.89 mm  max   3.25 mm  rot  1.64 deg  peak tau 0.23  sat 0  m_hat -0.000
+  operational_space    payload_1kg_adapted  rms   0.75 mm  max   1.41 mm  rot  2.45 deg  peak tau 0.54  sat 0  m_hat 1.044
+  operational_space    nominal_adapted      rms   1.50 mm  max   2.94 mm  rot  2.68 deg  peak tau 0.21  sat 0  m_hat 0.002
+== force-controlled wiping, 10 N, table height off by -10/0/+10 mm
+  hybrid_pi                  offset -10 mm  mean  9.96 N  rms err  1.18 N  min  0.00  max 13.04  lost   0.7 %  tangential 5.50 mm  trips 0
+  hybrid_pi_friction_ff      offset -10 mm  mean  9.96 N  rms err  1.22 N  min  0.00  max 13.24  lost   0.7 %  tangential 1.43 mm  trips 0
+  hybrid_feedforward         offset -10 mm  mean  9.61 N  rms err  2.40 N  min  0.00  max 14.89  lost   1.4 %  tangential 5.44 mm  trips 0
+  osc_position               offset -10 mm  mean  0.50 N  rms err  9.55 N  min  0.00  max  3.00  lost  75.2 %  tangential 1.38 mm  trips 0
+  hybrid_feedforward_detect  offset -10 mm  mean  9.68 N  rms err  2.49 N  min  0.00  max 14.89  lost   1.5 %  tangential 5.44 mm  trips 1
+  hybrid_pi                  offset  +0 mm  mean  9.96 N  rms err  1.16 N  min  0.00  max 13.22  lost   0.6 %  tangential 5.35 mm  trips 0
+  hybrid_pi_friction_ff      offset  +0 mm  mean  9.96 N  rms err  1.22 N  min  0.00  max 13.09  lost   0.8 %  tangential 1.37 mm  trips 0
+  hybrid_feedforward         offset  +0 mm  mean  9.75 N  rms err  2.51 N  min  0.00  max 15.09  lost   1.4 %  tangential 5.40 mm  trips 0
+  osc_position               offset  +0 mm  mean  4.55 N  rms err  5.75 N  min  0.00  max  6.98  lost  10.6 %  tangential 4.65 mm  trips 0
+  hybrid_feedforward_detect  offset  +0 mm  mean 10.16 N  rms err  2.52 N  min  0.00  max 15.01  lost   1.3 %  tangential 5.54 mm  trips 1
+  hybrid_pi                  offset +10 mm  mean  9.95 N  rms err  1.15 N  min  0.00  max 12.58  lost   0.7 %  tangential 5.21 mm  trips 0
+  hybrid_pi_friction_ff      offset +10 mm  mean  9.95 N  rms err  1.23 N  min  0.00  max 12.96  lost   0.9 %  tangential 1.34 mm  trips 0
+  hybrid_feedforward         offset +10 mm  mean  9.97 N  rms err  2.51 N  min  0.00  max 14.51  lost   1.3 %  tangential 5.38 mm  trips 0
+  osc_position               offset +10 mm  mean  8.92 N  rms err  1.68 N  min  0.00  max 10.77  lost   1.3 %  tangential 7.64 mm  trips 0
+  hybrid_feedforward_detect  offset +10 mm  mean  9.97 N  rms err  2.51 N  min  0.00  max 14.51  lost   1.3 %  tangential 5.38 mm  trips 0
